@@ -8,17 +8,17 @@ if __name__ == "__main__":
     operators = ["+", "-", "*", "/"]
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    operator = sys.argv[2]
-    if operator not in operators:
+    op = sys.argv[2]
+    if op not in operators:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    if operator == "+":
-        print(f"{a} {operator} {b} = {add(a, b)}".format(a,operator, b, add(a, b)))
-    elif operator == "-":
-        print(f"{a} {operator} {b} = {sub(a, b)}".format(a,operator, b, sub(a, b)))
-    elif operator == "*":
-        print(f"{a} {operator} {b} = {mul(a, b)}".format(a,operator, b, mul(a, b)))
-    elif operator == "/":
-        print(f"{a} {operator} {b} = {div(a, b)}".format(a,operator, b, div(a, b)))
+    if op == "+":
+        print(f"{a} {op} {b} = {add(a, b)}".format(a, op, b, add(a, b)))
+    elif op == "-":
+        print(f"{a} {op} {b} = {sub(a, b)}".format(a, op, b, sub(a, b)))
+    elif op == "*":
+        print(f"{a} {op} {b} = {mul(a, b)}".format(a, op, b, mul(a, b)))
+    elif op == "/":
+        print(f"{a} {op} {b} = {div(a, b)}".format(a, op, b, div(a, b)))
