@@ -9,7 +9,6 @@ Import function from module:
 	>>> add_integer = __import__("0-add_integer").add_integer
 
 Test first arg only:
-
 	>>> add_integer(2)
 	100
 

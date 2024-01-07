@@ -1,0 +1,37 @@
+The ``5-text_indentation`` module
+============================
+
+Using ``text_indentation``
+---------------------
+
+Import function from module:
+
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Test normal:
+        >>> text_indentation("will.this:work?")
+        will.
+    	<BLANKLINE>
+    	this:
+    	<BLANKLINE>
+    	work?
+    	<BLANKLINE>
+    	<BLANKLINE>
+
+
+Test text is not a string:
+	>>> text_indentation(3)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+
+Test text empty string:
+	>>> text_indentation("")
+	<BLANKLINE>
+
+Test no text:
+	>>> text_indentation()
+	Traceback (most recent call last):
+	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
