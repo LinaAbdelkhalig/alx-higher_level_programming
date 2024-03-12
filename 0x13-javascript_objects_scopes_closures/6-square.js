@@ -5,13 +5,12 @@ const Rectangle = require('./4-rectangle');
 class Square extends Rectangle {
   constructor (size) {
     super(size, size);
-    this.size = size;
   }
 
   charPrint (c) {
     if (c === undefined) { super.print(); } else {
-      const row = 'c'.repeat(this.size);
-      for (let i = 0; i < this.size; i++) { console.log(row); }
+      const row = 'c'.repeat(this.width);
+      for (let i = 0; i < this.height; i++) { console.log(row); }
     }
   }
 }
