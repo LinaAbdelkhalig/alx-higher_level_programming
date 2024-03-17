@@ -10,7 +10,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     s = sys.argv[4]
     cmd = "SELECT * FROM states WHERE name='{}' ORDER BY states.id".format(s)
-    cur.execute(sqlcmd)
+    cur.execute(cmd)
     rows = cur.fetchall()
     for row in rows:
         print(row)
