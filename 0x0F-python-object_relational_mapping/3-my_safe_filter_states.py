@@ -9,10 +9,9 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3])
     cur = db.cursor()
     s = sys.argv[4]
-    cmd = ("SELECT * FROM states \
-            WHERE name LIKE BINARY '{}' \
-            ORDER BY states.id".format(s))
-    cur.execute(cmd)
+    cur.execute("SELECT * FROM states \
+                WHERE name LIKE BINARY % s \
+                ORDER BY states.id", (s,))
     rows = cur.fetchall()
     for row in rows:
         print(row)
