@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-this script prints the first state object
+this script prints states that haave an a in their name
 """
 
 import sys
@@ -21,12 +21,9 @@ if __name__ == "__main__":
     session = Session()
 
     # querying
-    state = session.query(State).order_by(State.id).first()
-
-    if state is not None:
+    for state in
+    session.query(State).filter(State.name.contains('a')).order_by(State.id):
         print("{}: {}".format(state.id, state.name))
-    else:
-        print("Nothing")
 
     # close the session
     session.close()
