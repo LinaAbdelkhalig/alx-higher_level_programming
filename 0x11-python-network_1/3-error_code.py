@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
     this script senda req and displays the body of the resp in utf-8
     it also handles the urllib.error.HTTPError exception
 """
