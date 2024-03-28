@@ -10,5 +10,4 @@ import requests
 if __name__ == "__main__":
     url = sys.argv[1]
     r = requests.get(url)
-    headers = r.headers
-    print("{}".format(headers['X-Request-Id']))
+    print("{}".format(r.headers['X-Request-Id']))
