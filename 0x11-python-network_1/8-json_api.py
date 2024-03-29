@@ -12,10 +12,8 @@ if __name__ == "__main__":
         letter = sys.argv[1]
     except IndexError:
         letter = ""
-    
     url = 'http://0.0.0.0:5000/search_user'
-    dat = {'q' : letter}
-
+    dat = {'q': letter}
     try:
         r = requests.post(url, data=dat)
         rjson = r.json()
